@@ -1,0 +1,5 @@
+<lint>
+    <issue id="MissingDefaultResource">
+        <ignore path="res/drawable-normal/monitor.png" />
+    </issue>
+</lint>
