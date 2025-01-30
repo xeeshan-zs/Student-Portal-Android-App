@@ -52,7 +52,35 @@ public class MainActivity extends AppCompatActivity {
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 String url = request.getUrl().toString();
 
-                // Open these links in an external browser
+                // Handle phone links (tel:)
+                if (url.startsWith("tel:")) {
+                    Intent dialIntent = new Intent(Intent.ACTION_DIAL, Uri.parse(url));
+                    startActivity(dialIntent);
+                    return true;  // Prevent WebView from handling this URL
+                }
+
+                // Handle email links (mailto:)
+                if (url.startsWith("mailto:")) {
+                    Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse(url));
+                    startActivity(emailIntent);
+                    return true;  // Prevent WebView from handling this URL
+                }
+
+                // Handle WhatsApp links (https://wa.me/)
+                if (url.startsWith("https://wa.me/")) {
+                    Intent waIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(waIntent);
+                    return true;  // Prevent WebView from handling this URL
+                }
+
+                // Handle LinkedIn links (https://www.linkedin.com/)
+                if (url.startsWith("https://www.linkedin.com/")) {
+                    Intent linkedInIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(linkedInIntent);
+                    return true;  // Prevent WebView from handling this URL
+                }
+
+                // Handle Google Docs or Drive links in external browser
                 if (url.contains("docs.google.com/forms") || url.contains("drive.google.com")) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(intent);
