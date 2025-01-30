@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "762220215948",
+    "project_id": "xeeshan1207",
+    "storage_bucket": "xeeshan1207.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762220215948:android:73c22ebaf5de98835d05a9",
+        "android_client_info": {
+          "package_name": "com.atrons.studentportal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwOAV8DnNh-xktN7QXTbSn3BxdhevuDbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

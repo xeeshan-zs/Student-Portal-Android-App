@@ -34,10 +34,10 @@
         android:id="@+id/reloadButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reload"
-        android:textSize="12sp"
-        android:layout_marginBottom="100dp"
-        android:layout_marginEnd="20dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginEnd="-19dp"
+        android:layout_marginBottom="720dp"
+        android:text="Reload"
+        android:textSize="12sp" />
 </RelativeLayout>
